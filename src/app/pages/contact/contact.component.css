@@ -1,0 +1,18 @@
+/* src/app/contact/contact.component.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #eaeaea; /* Color de fondo más suave */
+  color: #333; /* Color de texto más oscuro para mejor contraste */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px; /* Ancho máximo para desktop */
+  margin: auto; /* Centramos el contenedor */
+  padding: 15px; /* Espaciado interno */
+}
+
+h1 {
+  margin-top: 20px; /* Espacio superior para el encabezado */
+}

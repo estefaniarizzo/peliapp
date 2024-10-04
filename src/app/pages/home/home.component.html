@@ -1,0 +1,36 @@
+<!-- src/app/pages/home/home.component.html -->
+<div class="container mt-4">
+  <!-- Filtros de búsqueda -->
+  <div class="row mb-4">
+    <div class="col-md-4">
+      <input type="text" [(ngModel)]="searchInput" (ngModelChange)="filterMovies()" class="form-control" placeholder="Buscar película...">
+    </div>
+    <div class="col-md-4">
+      <select [(ngModel)]="selectedGenre" (ngModelChange)="filterMovies()" class="form-select">
+        <option value="">Todos los Géneros</option>
+        <option value="Acción">Acción</option>
+        <option value="Drama">Drama</option>
+        <option value="Comedia">Comedia</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <select [(ngModel)]="selectedYear" (ngModelChange)="filterMovies()" class="form-select">
+        <option value="">Todos los Años</option>
+        <option value="2024">2024</option>
+        <option value="2023">2023</option>
+        <option value="1997">1997</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Listado de Películas -->
+  <div class="row">
+    <div class="col-md-4" *ngFor="let movie of filteredMovies">
+      <div class="movie-card">
+        <img [src]="movie.poster" class="movie-poster" alt="{{ movie.title }}">
+        <h5>{{ movie.title }}</h5>
+        <p>{{ movie.synopsis }}</p>
+      </div>
+    </div>
+  </div>
+</div>

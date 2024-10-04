@@ -1,0 +1,37 @@
+/* src/app/home/home.component.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #eaeaea; /* Color de fondo más suave */
+  color: #333; /* Color de texto más oscuro para mejor contraste */
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para las tarjetas de película */
+.movie-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadido box-shadow */
+  border-radius: 10px; /* Bordes redondeados para un mejor acabado */
+  overflow: hidden; /* Esconde el contenido desbordado */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de las tarjetas */
+  margin-bottom: 15px; /* Espaciado inferior entre tarjetas */
+}
+
+/* Efecto hover en tarjetas */
+.movie-card:hover {
+  transform: scale(1.05); /* Escala la tarjeta */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al hacer hover */
+}
+
+/* Estilos para la imagen de la película */
+.movie-poster {
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 5px solid #333; /* Línea en la parte inferior de la imagen */
+  transition: filter 0.3s ease; /* Transición para efectos de filtro */
+}
+
+/* Efecto hover en imágenes */
+.movie-card:hover .movie-poster {
+  filter: brightness(0.9); /* Hace la imagen más oscura al pasar el mouse */
+}
